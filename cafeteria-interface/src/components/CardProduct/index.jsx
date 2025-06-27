@@ -6,6 +6,8 @@ import { Cardimage, Container } from './styles';
 export function CardProduct({ product }) {
 	const { putProductInCart } = useCart();
 
+	console.log(product);
+
 	return (
 		<Container>
 			<Cardimage src={product.url} alt={product.name} />

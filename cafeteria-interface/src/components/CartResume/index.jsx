@@ -15,21 +15,20 @@ export function CartResume() {
 	const { cartProducts, clearCart } = useCart();
 
 	useEffect(() => {
-		const sumAllItems = cartProducts.reduce((acc, current) => {
-			return acc + current.price * current.quantity;
-		}, 0);
-
-		setFinalPrice(sumAllItems);
+		if (Array.isArray(cartProducts)) {
+			const sumAllItems = cartProducts.reduce((acc, current) => {
+				return acc + current.price * current.quantity;
+			}, 0);
+			setFinalPrice(sumAllItems);
+		}
 	}, [cartProducts]);
 
 	const submitOrder = async () => {
-		const products = cartProducts.map((product) => {
-			return {
-				id: product.id,
-				quantity: product.quantity,
-				price: product.price,
-			};
-		});
+		const products = (cartProducts || []).map((product) => ({
+			id: product.id,
+			quantity: product.quantity,
+			price: product.price,
+		}));
 
 		try {
 			const { data } = await api.post('/create-payment-intent', { products });

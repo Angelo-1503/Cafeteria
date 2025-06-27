@@ -8,7 +8,6 @@ export const Container = styled.div`
     padding: 20px;
     border-radius: 8px;
     background-color: #1e1e1e;
-    cursor: grab;
     box-shadow: rgba(0,0,0,0.35) 0px 5px 15px;
     position: relative;
 
@@ -40,7 +39,11 @@ export const Container = styled.div`
 
 export const Cardimage = styled.img`
     height: 100px;
-    position: absolute;
-    top: -50px;
     width: 100px;
+    position: absolute;
+    background-position: center;
+    top: -50px;
+    object-fit: cover;
+    border-radius: 8px; /* opcional: para cantos arredondados */
 `;
+

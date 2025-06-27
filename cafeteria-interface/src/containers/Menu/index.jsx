@@ -107,16 +107,10 @@ export function Menu() {
 				))}
 			</ProductsContainer>
 			<ButtonDiv>
-				<ButtonBack
-					onClick={() =>
-						navigate({
-							pathname: '/',
-						})
-					}
-				>
-					{' '}
-					{'< Voltar'}{' '}
-				</ButtonBack>
+				<ButtonBack onClick={() => navigate(-1)}>
+  {'<- Voltar'}
+</ButtonBack>
+
 			</ButtonDiv>
 		</Container>
 	);

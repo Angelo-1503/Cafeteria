@@ -9,6 +9,7 @@ export const ContainerButton = styled.button`
     border-radius: 5px;
     font-size: 30px;
     color: #fff;
+    cursor: pointer;
 
     &:hover {
         opacity: 0.6;

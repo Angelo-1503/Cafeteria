@@ -18,7 +18,7 @@ export const ButtonGroup = styled.div`
         justify-content: center;
         height: 30px;
         width: 30px;
-        color: #fff;
+        color: #1f1f1f;
         border-radius: 4px;
         background-color: var(--main-color);
         border: none;
@@ -33,6 +33,7 @@ export const EmptyCart = styled.p`
     font-size: 18px;
     text-align: center;
     font-weight: bold;
+    padding: 10px;
 `;
 
 export const TotalPrice = styled.p`

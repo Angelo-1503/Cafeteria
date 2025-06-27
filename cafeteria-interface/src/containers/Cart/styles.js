@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
     width: 100%;
-    background-color: gray;
+    background-color: #f5f5f5;
     min-height: 100vh;
     
 `;
@@ -19,13 +19,14 @@ export const Banner = styled.div`
 
     img {
         height: 130px;
+        border-radius: 100px;
     }
 `;
 
 export const Title = styled.div`
     font-size: 32px;
     font-weight: 800;
-    padding-bottom: 12px;
+    padding: 12px;
     color: var(--main-color);
     text-align: center;
     position: relative;

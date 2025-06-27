@@ -7,9 +7,9 @@ export function Cart() {
 	return (
 		<Container>
 			<Banner>
-				<img src={Logo} alt="logo-devburger" />
+				<img src={Logo} alt="logo-radalap" />
 			</Banner>
-			<Title>Checkout - Pedido </Title>
+			<Title>Pedido</Title>
 			<Content>
 				<CartItems />
 				<CartResume />

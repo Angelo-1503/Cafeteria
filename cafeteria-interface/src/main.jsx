@@ -1,16 +1,24 @@
+import { Elements } from '@stripe/react-stripe-js';
 import React from 'react';
 import ReactDom from 'react-dom/client';
-import { RouterProvider } from 'react-router-dom';
-import { UserProvider } from './hooks/UserContext';
-import { router } from './routes';
+import { BrowserRouter } from 'react-router-dom';
+import { ToastContainer } from 'react-toastify';
 
-import GlobalStyles from './styles/GlobalStyles';
+import stripePromise from './config/stripeConfig';
+import AppProvider from './hooks';
+import { Router } from './routes';
+import GlobalStyles from './styles/globalStyles';
 
 ReactDom.createRoot(document.getElementById('root')).render(
 	<React.StrictMode>
-		<UserProvider>
-			<RouterProvider router={router} />
+		<AppProvider>
+			<Elements stripe={stripePromise}>
+				<BrowserRouter>
+					<Router />
+				</BrowserRouter>
+			</Elements>
 			<GlobalStyles />
-		</UserProvider>
+			<ToastContainer autoClose={2000} theme="dark" />
+		</AppProvider>
 	</React.StrictMode>,
 );
