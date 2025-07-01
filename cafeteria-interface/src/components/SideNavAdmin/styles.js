@@ -29,7 +29,7 @@ export const NavLink = styled(Link)`
   text-decoration: none;
   color: #fff;
   background-color: ${(props) =>
-        props.$isActive ? '#d3ad7f' : 'transparent'};
+    props.$isActive ? '#d3ad7f' : 'transparent'};
 
   &:hover {
     background-color: #d3ad7f;
@@ -40,3 +40,7 @@ export const Footer = styled.footer`
   width: 100%;
   margin-top: auto;
 `;
+
+export const Img = styled.img`
+  border-radius: 100px;
+`

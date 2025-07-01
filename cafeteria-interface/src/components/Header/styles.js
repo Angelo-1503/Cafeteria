@@ -37,6 +37,10 @@ margin: 0 1rem;
       font-size: 1.8rem;
       color: #fff;
       transition: 0.3s linear;
+       color: ${(props) =>
+    props.$isActiveStatus ? '#d3ad7f' : '#fff'};
+  border-bottom: ${(props) =>
+    props.$isActiveStatus ? `2px solid #d3ad7f` : 'none'};
 
       &:hover{
         color: #d3ad7f;

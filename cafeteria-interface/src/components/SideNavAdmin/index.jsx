@@ -3,7 +3,7 @@ import { useResolvedPath } from 'react-router-dom';
 import Logo from '../../assets/logo.jpg';
 import { useUser } from '../../hooks/UserContext';
 import { navLinks } from './navLinks';
-import { Container, Footer, NavLink, NavLinkContainer } from './styles';
+import { Container, Footer, Img, NavLink, NavLinkContainer } from './styles';
 
 export function SideNavAdmin() {
 	const { logout } = useUser();
@@ -11,7 +11,7 @@ export function SideNavAdmin() {
 
 	return (
 		<Container>
-			<img src={Logo} alt="Hamburguer logo" />
+			<Img src={Logo} alt="Hamburguer logo" />
 			<NavLinkContainer>
 				{navLinks.map((link) => (
 					<NavLink

@@ -7,3 +7,4 @@ export * from './CartResume';
 export * from './CartItems';
 export * from './Stripe/CheckoutForm';
 export * from './SideNavAdmin';
+export * from './Footer';
